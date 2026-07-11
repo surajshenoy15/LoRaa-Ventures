@@ -184,53 +184,162 @@ function Footer() {
   );
 }
 
-function ProductPreview() {
+function AppLoginPreview() {
   return (
-    <div className="product-preview" aria-label="LoRaa Connect product overview">
-      <div className="preview-topbar">
-        <div>
-          <span className="preview-kicker">Flagship product</span>
-          <strong>LoRaa Connect</strong>
-        </div>
-        <span className="preview-status"><span /> Operational workflow</span>
-      </div>
+    <div className="hero-product-art" aria-label="LoRaa Connect mobile application preview">
+      <style>{`
+        .hero-product-art {
+          position: relative;
+          width: min(100%, 610px);
+          margin-inline: auto;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          isolation: isolate;
+        }
 
-      <div className="preview-body">
-        <div className="preview-sidebar" aria-hidden="true">
-          <span className="sidebar-active" />
-          <span />
-          <span />
-          <span />
-        </div>
+        .hero-product-art::before {
+          content: '';
+          position: absolute;
+          width: 72%;
+          aspect-ratio: 1;
+          right: 2%;
+          bottom: 2%;
+          border-radius: 50%;
+          background: rgba(35, 136, 255, 0.26);
+          filter: blur(72px);
+          z-index: -1;
+          pointer-events: none;
+        }
 
-        <div className="preview-content">
-          <div className="preview-heading">
-            <div>
-              <span>Activity workflow</span>
-              <strong>Verified participation</strong>
-            </div>
-            <div className="preview-avatar">LC</div>
-          </div>
+        .hero-product-art::after {
+          content: '';
+          position: absolute;
+          inset: 6% 3% 2% 8%;
+          border-radius: 42px;
+          border: 1px solid rgba(255, 255, 255, 0.11);
+          transform: rotate(-2deg);
+          z-index: -1;
+          pointer-events: none;
+        }
 
-          <div className="workflow-list">
-            {[
-              ['01', 'Register', 'Student and event details'],
-              ['02', 'Capture', 'Activity proof and validation'],
-              ['03', 'Review', 'Authorized administrative review'],
-              ['04', 'Complete', 'Approved participation record'],
-            ].map(([number, title, description]) => (
-              <div className="workflow-row" key={number}>
-                <span className="workflow-number">{number}</span>
-                <div>
-                  <strong>{title}</strong>
-                  <p>{description}</p>
-                </div>
-                <Icon name="check" size={18} />
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
+        .hero-product-image-link {
+          display: block;
+          width: 100%;
+          border-radius: 30px;
+          outline: none;
+          transform: translateZ(0);
+        }
+
+        .hero-product-image-link:focus-visible {
+          box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.3);
+        }
+
+        .hero-product-image {
+          display: block;
+          width: 100%;
+          height: auto;
+          max-height: 690px;
+          object-fit: contain;
+          border-radius: 30px;
+          box-shadow:
+            0 42px 90px rgba(0, 8, 28, 0.46),
+            0 16px 34px rgba(0, 70, 175, 0.24),
+            0 0 0 1px rgba(255, 255, 255, 0.12);
+          animation: heroProductFloat 6s ease-in-out infinite;
+          user-select: none;
+          -webkit-user-drag: none;
+        }
+
+        @keyframes heroProductFloat {
+          0%, 100% {
+            transform: translateY(0) rotate(0deg);
+          }
+          50% {
+            transform: translateY(-10px) rotate(-0.35deg);
+          }
+        }
+
+        @media (max-width: 1180px) {
+          .hero-product-art {
+            width: min(100%, 520px);
+          }
+
+          .hero-product-image {
+            max-height: 625px;
+          }
+        }
+
+        @media (max-width: 980px) {
+          .hero-product-art {
+            width: min(100%, 560px);
+            margin-top: 18px;
+          }
+
+          .hero-product-art::after {
+            inset: 5% 4% 1%;
+          }
+
+          .hero-product-image {
+            max-height: none;
+          }
+        }
+
+        @media (max-width: 640px) {
+          .hero-product-art {
+            width: min(100%, 430px);
+            margin-top: 10px;
+          }
+
+          .hero-product-image-link,
+          .hero-product-image {
+            border-radius: 22px;
+          }
+
+          .hero-product-image {
+            box-shadow:
+              0 28px 60px rgba(0, 8, 28, 0.38),
+              0 10px 24px rgba(0, 70, 175, 0.2),
+              0 0 0 1px rgba(255, 255, 255, 0.12);
+          }
+        }
+
+        @media (max-width: 420px) {
+          .hero-product-art {
+            width: 100%;
+          }
+
+          .hero-product-image-link,
+          .hero-product-image {
+            border-radius: 18px;
+          }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+          .hero-product-image {
+            animation: none;
+          }
+        }
+      `}</style>
+
+      <a
+        className="hero-product-image-link"
+        href={PRODUCT_URL}
+        target="_blank"
+        rel="noreferrer"
+        aria-label="Open the LoRaa Connect website"
+      >
+        <img
+          className="hero-product-image"
+          src="/hero.png"
+          alt="LoRaa Connect app interface displayed inside a mobile phone mockup"
+          width="1103"
+          height="1382"
+          loading="eager"
+          decoding="async"
+          fetchPriority="high"
+        />
+      </a>
     </div>
   );
 }
@@ -292,7 +401,7 @@ function HomePage() {
             </div>
 
             <div className="hero-visual" data-reveal>
-              <ProductPreview />
+              <AppLoginPreview />
             </div>
           </div>
         </section>

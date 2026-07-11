@@ -1,0 +1,15 @@
+<svg width="720" height="180" viewBox="0 0 720 180" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">LoRaa Ventures</title>
+  <desc id="desc">Blue LoRaa Ventures logo for light backgrounds</desc>
+  <g transform="translate(18 15)" stroke="#1497D4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M55 18L82 45L55 72L28 45L55 18Z"/>
+    <path d="M92 55L119 82L92 109L65 82L92 55Z"/>
+    <path d="M55 92L82 119L55 146L28 119L55 92Z"/>
+    <path d="M18 55L45 82L18 109L-9 82L18 55Z"/>
+    <path d="M55 44V68M68 82H44M55 96V120M42 82H18"/>
+  </g>
+  <text x="165" y="103" fill="#0C315E" font-family="Arial, Helvetica, sans-serif" font-size="88" font-weight="500" letter-spacing="-4">LoRaa</text>
+  <line x1="171" y1="125" x2="292" y2="125" stroke="#1497D4" stroke-width="5" stroke-linecap="round"/>
+  <line x1="513" y1="125" x2="632" y2="125" stroke="#1497D4" stroke-width="5" stroke-linecap="round"/>
+  <text x="313" y="137" fill="#1497D4" font-family="Arial, Helvetica, sans-serif" font-size="29" font-weight="700" letter-spacing="8">VENTURES</text>
+</svg>

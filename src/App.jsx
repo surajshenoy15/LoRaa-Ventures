@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-const PRODUCT_URL = 'https://loraa-connect.vikasanafoundation.org';
+const PRODUCT_URL = 'https://loraaconnect.loraaventures.com';
 const PRIVACY_URL = '/privacy-policy';
 const CONTACT_EMAILS = [
   'suraj@loraaventures.com',
